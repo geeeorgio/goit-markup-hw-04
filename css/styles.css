@@ -115,12 +115,12 @@ button {
 
 .nav-item {}
 
-.nav-list .nav-item:first-child {
+.nav-list .nav-item:first-child .nav-link {
     color: var(--ocean);
     position: relative;
 }
 
-.nav-list .nav-item:first-child::after {
+.nav-list .nav-item:first-child .nav-link::after {
     content: '';
     position: absolute;
     background-color: var(--ocean);
@@ -555,6 +555,10 @@ button {
     border-radius: 50%;
     background-color: var(--iris);
     transition: background-color var(--animate);
+}
+
+.footer-social-icon {
+    fill: var(--cloud);
 }
 
 .footer-social-media-wrapper .footer-social-link:hover,
