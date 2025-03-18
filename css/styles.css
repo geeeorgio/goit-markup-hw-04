@@ -118,6 +118,7 @@ button {
 .nav-list .nav-item:first-child .nav-link {
     color: var(--ocean);
     position: relative;
+    transition: color var(--animate);
 }
 
 .nav-list .nav-item:first-child .nav-link::after {
@@ -144,7 +145,7 @@ button {
 .nav-link:focus,
 .address-link:hover,
 .address-link:focus {
-    color: #404bbf;
+    color: var(--ocean);
 }
 
 .address-header {
