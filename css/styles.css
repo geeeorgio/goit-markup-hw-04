@@ -11,6 +11,7 @@
     --grey: rgba(46, 47, 66, 0.7);
     --white: #fff;
     --dairy: #fcfcfc;
+    --animate: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -118,9 +119,22 @@ button {
     flex-direction: row;
     gap: 40px;
     margin-right: 332px;
+
 }
 
-.nav-item {}
+.nav-item {
+    position: relative;
+}
+
+.nav-list .nav-item:first-child::after {
+    content: ' ';
+    position: absolute;
+    background-color: var(--ocean);
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    bottom: 0px;
+}
 
 .nav-link {
     display: block;
@@ -172,7 +186,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     /*? height: 100vh;*/
-    background-color: #2e2f42;
+    background-image: linear-gradient(var(--grey), var(--grey)), url(../images/hero-bck.jpg);
     padding: 188px 0;
 }
 
@@ -210,6 +224,7 @@ button {
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #4d5ae5;
+    transition: background-color var(--animate);
 }
 
 .order-button:hover,
@@ -252,6 +267,22 @@ button {
     min-width: 264px;
 }
 
+.issues-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    background-color: var(--cloud);
+    margin-bottom: 8px;
+}
+
+.issues-icon {
+    justify-content: center;
+    fill: currentColor;
+    margin: 24px 100px;
+}
+
 .issues-parag {
     font-weight: 500;
     font-size: 20px;
@@ -278,10 +309,6 @@ button {
     padding: 120px 0;
 }
 
-.team-description-container {
-    padding: 32px 0;
-}
-
 .team-parag {
     text-transform: capitalize;
     font-size: 36px;
@@ -303,11 +330,15 @@ button {
 
 .team-item {
     width: calc((100% - 72px) / 4);
-    max-width: 264px;
     text-align: center;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: var(--white);
+}
+
+.team-description-container {
+    padding: 32px 0px;
+    margin: 0 16px;
 }
 
 .team-item-parag {
@@ -325,11 +356,36 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    margin-bottom: 8px;
 }
 
 .team-item-parag,
 .team-item-desc {
     text-align: center;
+}
+
+.team-social-icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 12px 12px;
+    background-color: var(--iris);
+    transition: background-color var(--animate);
+}
+
+.team-social-icon {}
+
+.social-icon-circle:hover {
+    background-color: var(--ocean);
 }
 
 /* Team section end */
@@ -362,7 +418,45 @@ button {
     justify-content: space-between;
 }
 
-.portfolio-item {}
+.portfolio-item {
+    position: relative;
+    transition: box-shadow var(--animate);
+}
+
+.portfolio-card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card {
+    object-fit: cover;
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    height: 100%;
+    padding: 40px 32px 0;
+    left: 0;
+    bottom: -100%;
+    background-color: var(--iris);
+    transition: bottom var(--animate);
+}
+
+.portfolio-overlay-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover .portfolio-card-overlay {
+    bottom: 0px;
+}
 
 .portfolio-description-container {
     border: 1px solid #e7e9fc;
