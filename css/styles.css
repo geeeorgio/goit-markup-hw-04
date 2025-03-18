@@ -372,13 +372,8 @@ button {
 }
 
 .social-icon-circle {
-    cursor: pointer;
     width: 40px;
     height: 40px;
-    padding: 12px 12px;
-    border-radius: 50%;
-    background-color: var(--iris);
-    transition: background-color var(--animate);
 }
 
 .team-social-link {
@@ -387,12 +382,17 @@ button {
     align-items: center;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+    background-color: var(--iris);
+    transition: background-color var(--animate);
 }
 
-.team-social-icon {}
+.team-social-icon {
+    fill: var(--cloud);
+}
 
-.team-social-icons-wrapper .social-icon-circle:hover,
-.team-social-icons-wrapper .social-icon-circle:focus {
+.team-social-icons-wrapper .team-social-link:hover,
+.team-social-icons-wrapper .team-social-link:focus {
     background-color: var(--ocean);
 }
 
@@ -445,7 +445,7 @@ button {
     top: 0;
     height: 100%;
     width: 100%;
-    padding: 40px 32px 0;
+    padding: 40px 32px;
     transform: translateY(100%);
     background-color: var(--iris);
     transition: transform var(--animate);
@@ -552,10 +552,13 @@ button {
     align-items: center;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+    background-color: var(--iris);
+    transition: background-color var(--animate);
 }
 
-.footer-social-media-wrapper .social-icon-circle:hover,
-.footer-social-media-wrapper .social-icon-circle:focus {
+.footer-social-media-wrapper .footer-social-link:hover,
+.footer-social-media-wrapper .footer-social-link:focus {
     background-color: var(--green);
 }
 
