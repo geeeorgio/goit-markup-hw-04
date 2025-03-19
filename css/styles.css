@@ -281,7 +281,6 @@ button {
 .issues-icon {
     justify-content: center;
     fill: currentColor;
-    margin: 24px 100px;
 }
 
 .issues-parag {
@@ -339,7 +338,6 @@ button {
 
 .team-description-container {
     padding: 32px 0px;
-    margin: 0 16px;
 }
 
 .team-item-parag {
@@ -526,7 +524,6 @@ button {
 }
 
 .footer-social-media-wrapper {
-    display: flex;
     flex-direction: column;
 }
 
